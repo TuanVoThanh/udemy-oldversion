@@ -1,0 +1,80 @@
+@mixin styleText($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+@mixin styleButtons($bg-color, $border-color, $border-radius, $pd-y, $pd-x) {
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: $pd-y $pd-x;
+  margin-right: $mg-0;
+  align-self: center;
+  width: max-content;
+}
+
+@mixin styleButtonHover($bg-hover, $border-hover, $color-hover) {
+  background-color: $bg-hover;
+  border-color: $border-hover;
+  color: $color-hover;
+}
+
+@mixin styleFormSearch($bg-color, $border-color, $border-focus,$font-size, $bg-color-icon) {
+  .txt-search {
+    font-size: $font-size;
+    height: 40px;
+    border-radius: 0;
+    border: 0px solid $border-color;
+    box-shadow: none;
+    background-color: $bg-color;
+
+    &:focus {
+      background-color: $color-white-0;
+      border: 1px solid $border-focus;
+      border-right-color: transparent;
+      & + .div-btn-search {
+        .btn-search {
+          background-color: $color-white-0;
+          border-color: f1efef;
+          border: 1px solid #f1efef;
+          border-left-color: transparent;
+          &:hover {
+            background-color: $color-red-0;
+            color: $color-white-0;
+          }
+        }
+      }
+    }
+  }
+  .div-btn-search {
+    .btn-search {
+      height: 40px;
+      border-radius: 0;
+      border: 1px solid $color-white-cream;
+      background-color: $bg-color-icon;
+      border-left-color: transparent;
+      color: $color-red-0;
+      transition: none;
+      &:hover {
+        border: 1px solid $color-red-0;
+        background-color: $color-red-0;
+        color: $color-white-0;
+      }
+    }
+  }
+}
+
+@mixin responsive($screen) {
+  @if (map-has-key($map: $breakpoints, $key: $screen)) {
+    //nếu tìm thấy tên màn hình,vd: screen: small
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $screen,
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "không tìm thấy màn hình";
+  }
+}

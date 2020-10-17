@@ -1,0 +1,32 @@
+@media screen and (max-width: 576px) {
+  .intro {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .how-udemy-work__col > i {
+    display: none;
+  }
+}
+
+.how-udemy-work {
+  background: linear-gradient(-45deg, #ec5252 0%, #6e1a52 100%);
+  color: $color-white-0;
+  .container {
+    .container-fluid {
+      padding: 20px 0;
+      display: flex;
+      .how-udemy-work__col {
+        display: flex;
+        i{
+          font-size: $fs-4;
+        }
+        p {
+          margin-bottom: 0;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

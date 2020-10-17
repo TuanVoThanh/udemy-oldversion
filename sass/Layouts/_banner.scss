@@ -1,0 +1,34 @@
+.hrBanner {
+  background: linear-gradient(-45deg, #ec5252 0%, #6e1a52 100%);
+  color: $color-white-0;
+  height: 5px;
+}
+
+.banner {
+  background-color: $color-black-0;
+  padding-bottom: $pd-3;
+}
+
+.banner__item-group {
+  .banner__icon, .banner__text-group {
+    text-align: center;
+    font-size: $fs-3;
+    color: $color-white-0;
+    align-self: center;
+    padding: $pd-3;
+    p{
+        font-size: $fs-1;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .banner__icon {
+      display: none;
+    }
+    .banner__text-group{
+        margin: 0 auto;
+        padding: 0 !important;
+    }
+  }
+  

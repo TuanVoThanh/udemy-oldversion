@@ -1,0 +1,43 @@
+.comments {
+  .comments__wrapper {
+    h4 {
+      padding: $pd-3 0 $pd-2 0;
+    }
+    .comments__content {
+      display: flex;
+      .comments__item {
+        justify-content: space-evenly;
+        background-color: $color-white-0;
+        padding: 20px;
+        margin: $mg-0;
+        .comments__item-profile {
+          display: flex;
+          .img-circle {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: $color-black-light;
+            color: $color-white-0;
+            img {
+              border-radius: 50%;
+              width: 46px;
+            }
+            span {
+              line-height: 46px;
+              padding-left: 14px;
+            }
+          }
+          .name {
+            margin-left: $mg-2;
+            align-self: center;
+            font-weight: bold;
+          }
+        }
+        p {
+          padding-top: $pd-1;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

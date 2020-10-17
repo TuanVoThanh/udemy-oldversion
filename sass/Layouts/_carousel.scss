@@ -1,0 +1,35 @@
+.udemyCarousel {
+  background-image: url("../img/cover.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  .content {
+    margin: auto 0;
+    .heading {
+      @include styleText($color-white-0, $fs-4, $fw-bold);
+    }
+    .text {
+      @include styleText($color-white-0, $fs-2, $fw-normal);
+    }
+    .div-search {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      @include styleFormSearch(
+        $color-white-0,
+        $color-white-0,
+        $color-white-0,
+        $fs-2,
+        $color-white-0
+      );
+    }
+  }
+  @media screen and (min-width: 576px) {
+    .content {
+      margin-left: 20%;
+    }
+  }
+}
